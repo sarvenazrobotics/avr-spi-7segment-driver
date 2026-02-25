@@ -59,3 +59,8 @@ void main(void)
         delay_ms(2);
     }
 }
+
+send_16bit(digit, segment)
+     │          │
+     │          └─→ Segment pattern (0xC0-0x90 for 0-9)
+     └─→ Digit select (0x01, 0x02, 0x04, 0x08)
