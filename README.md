@@ -107,13 +107,7 @@ Latch (Manual GPIO)
 
 
 
-ATmega (SPI Master)
-        ↓
-74HC595 #1 (Segment Control)
-        ↓ Q7'
-74HC595 #2 (Digit Control)
-        ↓
-5641AS 4-Digit Display
+
 
 
 
