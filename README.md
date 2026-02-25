@@ -104,6 +104,9 @@ Latch (Manual GPIO)
 | 220Ω Resistors     | 8        | Segment current limiting           |
 | Breadboard & Wires | —        | Prototyping                        |
 
+
+
+
 ATmega (SPI Master)
         ↓
 74HC595 #1 (Segment Control)
@@ -111,6 +114,16 @@ ATmega (SPI Master)
 74HC595 #2 (Digit Control)
         ↓
 5641AS 4-Digit Display
+
+
+
+
+| ATmega Pin  | 74HC595 Pin    |
+| ----------- | -------------- |
+| MOSI (PB3)  | DS (Pin 14)    |
+| SCK (PB5)   | SH_CP (Pin 11) |
+| Latch (PB2) | ST_CP (Pin 12) |
+
 
 
 
