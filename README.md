@@ -79,6 +79,10 @@ outputs to activate individual display positions, while the second register (U3)
 ## Hardware 
 
 
+https://github.com/user-attachments/assets/6d6d9093-df26-4e0c-9bd4-c60a06c47ada
+
+
+
 
 ### Main Components Used
 
