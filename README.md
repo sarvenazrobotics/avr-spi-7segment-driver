@@ -2,9 +2,8 @@
 
 - [Overview](#-overview)
 - [Features](#-features)
-- [Installation](#-installation)
 - [Usage](#-usage)
-- [License](#-license)
+
 
 - ##  Overview
 
@@ -30,3 +29,32 @@ Instead of wasting multiple GPIO pins, this design uses just **3 pins** to contr
 - **Refresh Rate:** ~500Hz (2ms per digit)
 - **Microcontroller:** ATmega328P @ 16MHz
 - **Display:** 4-Digit 7-Segment (Multiplexed)
+
+
+
+---
+
+
+
+
+##  Usage
+
+### Basic Display
+
+```c
+void main(void)
+{
+    spi_init();
+    
+    while(1)
+    {
+        send_16bit(0x01, 0xF9);  // Digit 1 = 1
+        delay_ms(2);
+        send_16bit(0x02, 0xA4);  // Digit 2 = 2
+        delay_ms(2);
+        send_16bit(0x04, 0xB0);  // Digit 3 = 3
+        delay_ms(2);
+        send_16bit(0x08, 0x99);  // Digit 4 = 4
+        delay_ms(2);
+    }
+}
