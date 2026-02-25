@@ -104,5 +104,13 @@ Latch (Manual GPIO)
 | 220Ω Resistors     | 8        | Segment current limiting           |
 | Breadboard & Wires | —        | Prototyping                        |
 
+ATmega (SPI Master)
+        ↓
+74HC595 #1 (Segment Control)
+        ↓ Q7'
+74HC595 #2 (Digit Control)
+        ↓
+5641AS 4-Digit Display
+
 
 
