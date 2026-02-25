@@ -1,11 +1,13 @@
 ## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Usage](#-usage)
-- [Simulation](#-Simulation)
-- [Hardware](#-Hardware)
-- [Summary](#-Summary)
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Usage](#usage)
+- [Simulation](#simulation)
+- [Hardware](#hardware)
+- [Summary](#summary)[Summary](#-Summary)
 
 
 - ##  Overview
