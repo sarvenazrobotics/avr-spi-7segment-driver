@@ -65,3 +65,9 @@ send_16bit(digit, segment)
      │          │
      │          └─→ Segment pattern (0xC0-0x90 for 0-9)
      └─→ Digit select (0x01, 0x02, 0x04, 0x08)
+
+```
+## Simulation
+<p align="center">
+  <img src="images/SPI.png" width="600" height="400">
+</p>
