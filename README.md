@@ -81,4 +81,19 @@ outputs to activate individual display positions, while the second register (U3)
 
 https://github.com/user-attachments/assets/1b9b47d5-8850-4e56-af3f-199bcfffe629
 
+### Main Components Used
+Microcontroller
+
+ATmega328p AVR (16 MHz)
+
+Configured as SPI Master
+
+Provides:
+
+MOSI (Data)
+
+SCK (Clock)
+
+Latch (Manual GPIO)
+
 
