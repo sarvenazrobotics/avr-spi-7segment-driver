@@ -110,7 +110,7 @@ Latch (Manual GPIO)
 
 
 
-
+## SPI CONNECTIONS
 
 | ATmega Pin  | 74HC595 Pin    |
 | ----------- | -------------- |
@@ -119,5 +119,12 @@ Latch (Manual GPIO)
 | Latch (PB2) | ST_CP (Pin 12) |
 
 
+## PINS CONTROL 
+| 74HC595 Pin  | Connection |
+| ------------ | ---------- |
+| MR (Pin 10)  | VCC        |
+| OE (Pin 13)  | GND        |
+| VCC (Pin 16) | +5V        |
+| GND (Pin 8)  | GND        |
 
 
