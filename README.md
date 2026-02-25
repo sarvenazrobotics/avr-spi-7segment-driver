@@ -4,6 +4,8 @@
 - [Features](#-features)
 - [Usage](#-usage)
 - [Simulation](#-Simulation)
+- [Hardware](#-Hardware)
+- [Summary](#-Summary)
 
 
 - ##  Overview
