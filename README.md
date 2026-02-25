@@ -34,11 +34,11 @@ Instead of wasting multiple GPIO pins, this design uses just **3 pins** to contr
 
 ---
 
-```markdown
+
 
 
 ##  Usage
-
+```markdown
 ### Basic Display
 
 
