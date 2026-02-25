@@ -34,12 +34,13 @@ Instead of wasting multiple GPIO pins, this design uses just **3 pins** to contr
 
 ---
 
-
+```markdown
 
 
 ##  Usage
 
 ### Basic Display
+
 
 ```c
 void main(void)
