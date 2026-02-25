@@ -69,5 +69,5 @@ send_16bit(digit, segment)
 ```
 ## Simulation
 <p align="center">
-  <img src="images/SPI.png" width="600" height="400">
+  <img src="images/SPI_7.png" width="600" height="400">
 </p>
