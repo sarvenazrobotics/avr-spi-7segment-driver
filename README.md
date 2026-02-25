@@ -96,4 +96,13 @@ SCK (Clock)
 
 Latch (Manual GPIO)
 
+| Component          | Quantity | Description                        |
+| ------------------ | -------- | ---------------------------------- |
+| ATmega MCU         | 1        | SPI Master Controller              |
+| 74HC595            | 2        | 8-bit Shift Registers              |
+| 5641AS             | 1        | 4-Digit 7-Segment (Common Cathode) |
+| 220Ω Resistors     | 8        | Segment current limiting           |
+| Breadboard & Wires | —        | Prototyping                        |
+
+
 
