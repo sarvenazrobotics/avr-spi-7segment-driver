@@ -74,3 +74,11 @@ send_16bit(digit, segment)
 
 This circuit features an **ATmega328P microcontroller** driving a 4-digit 7-segment display through **SPI protocol** and two **74HC595 shift registers**. The first register (U2) manages digit selection via its Q0-Q7
 outputs to activate individual display positions, while the second register (U3) controls the segment patterns (A-G and DP) to form numeric characters. Communication occurs through three SPI pins: PB2 for latching (ST_CP), PB3 for data transmission (MOSI/DS), and PB5 for clock synchronization (SH_CP). The shift registers are **daisy-chained** with U2's Q7' output feeding into U3's data input, enabling efficient 16-bit data transfer. Using **multiplexing**, the system rapidly cycles through each digit with 2ms refresh intervals, leveraging persistence of vision to create a stable, flicker-free display showing "9467". The display operates in **common anode mode**, requiring inverted logic where logic 0 illuminates segments. Current-limiting resistors protect the LEDs and maintain uniform brightness across all segments.
+
+
+## Hardware 
+
+
+https://github.com/user-attachments/assets/1b9b47d5-8850-4e56-af3f-199bcfffe629
+
+
