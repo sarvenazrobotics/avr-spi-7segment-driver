@@ -7,7 +7,7 @@
 - [Usage](#usage)
 - [Simulation](#simulation)
 - [Hardware](#hardware)
-- [Summary](#summary)[Summary](#-Summary)
+- [Summary](#summary)
 
 
 - ##  Overview
