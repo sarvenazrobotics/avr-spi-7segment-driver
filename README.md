@@ -79,10 +79,6 @@ outputs to activate individual display positions, while the second register (U3)
 ## Hardware 
 
 
-<p align="center">
-    <source src="https://github.com/user-attachments/assets/1b9b47d5-8850-4e56-af3f-199bcfffe629?raw=true" type="video/mp4">
-  </video>
-</p>
 
 ### Main Components Used
 
@@ -117,5 +113,11 @@ outputs to activate individual display positions, while the second register (U3)
 | OE (Pin 13)  | GND        |
 | VCC (Pin 16) | +5V        |
 | GND (Pin 8)  | GND        |
+
+
+## Summary 
+This project implements a 4-digit 7-segment display system controlled via the SPI protocol using an ATmega microcontroller. To reduce GPIO usage and improve scalability, two 74HC595 serial-in parallel-out shift registers are cascaded to control both segment lines and digit selection lines.
+
+The display module used is a 5641AS (Common Cathode) 4-digit 7-segment display. The first shift register drives the segment pins (A–G, DP), while the second shift register controls the digit cathodes. Communication between the microcontroller and the shift registers is handled using hardware SPI for efficient and high-speed data transfer.
 
 
