@@ -79,8 +79,12 @@ outputs to activate individual display positions, while the second register (U3)
 ## Hardware 
 
 
-https://github.com/user-attachments/assets/1b9b47d5-8850-4e56-af3f-199bcfffe629
-<video width="600" height="400" controls>
+<p align="center">
+  <video width="600" height="400" controls>
+    <source src="https://github.com/user-attachments/assets/1b9b47d5-8850-4e56-af3f-199bcfffe629" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 ### Main Components Used
 Microcontroller
