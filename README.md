@@ -1,9 +1,13 @@
 ## Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Usage](#-usage)
-- [Simulation](#-Simulation)
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Usage](#usage)
+- [Simulation](#simulation)
+- [Hardware](#hardware)
+- [Summary](#summary)
 
 
 - ##  Overview
@@ -69,5 +73,59 @@ send_16bit(digit, segment)
 ```
 ## Simulation
 <p align="center">
-  <img src="images/SPI.png" width="600" height="400">
+  <img src="images/SPI_7.png" width="600" height="400">
 </p>
+
+This circuit features an **ATmega328P microcontroller** driving a 4-digit 7-segment display through **SPI protocol** and two **74HC595 shift registers**. The first register (U2) manages digit selection via its Q0-Q7
+outputs to activate individual display positions, while the second register (U3) controls the segment patterns (A-G and DP) to form numeric characters. Communication occurs through three SPI pins: PB2 for latching (ST_CP), PB3 for data transmission (MOSI/DS), and PB5 for clock synchronization (SH_CP). The shift registers are **daisy-chained** with U2's Q7' output feeding into U3's data input, enabling efficient 16-bit data transfer. Using **multiplexing**, the system rapidly cycles through each digit with 2ms refresh intervals, leveraging persistence of vision to create a stable, flicker-free display showing "9467". The display operates in **common anode mode**, requiring inverted logic where logic 0 illuminates segments. Current-limiting resistors protect the LEDs and maintain uniform brightness across all segments.
+
+
+## Hardware 
+
+
+https://github.com/user-attachments/assets/6d6d9093-df26-4e0c-9bd4-c60a06c47ada
+
+
+
+
+### Main Components Used
+
+
+| Component          | Quantity | Description                        |
+| ------------------ | -------- | ---------------------------------- |
+| ATmega MCU         | 1        | SPI Master Controller              |
+| 74HC595            | 2        | 8-bit Shift Registers              |
+| 5641AS             | 1        | 4-Digit 7-Segment (Common Cathode) |
+| 220Ω Resistors     | 8        | Segment current limiting           |
+| Breadboard & Wires | —        | Prototyping                        |
+
+
+
+
+
+
+
+## SPI CONNECTIONS
+
+| ATmega Pin  | 74HC595 Pin    |
+| ----------- | -------------- |
+| MOSI (PB3)  | DS (Pin 14)    |
+| SCK (PB5)   | SH_CP (Pin 11) |
+| Latch (PB2) | ST_CP (Pin 12) |
+
+
+## PINS CONTROL 
+| 74HC595 Pin  | Connection |
+| ------------ | ---------- |
+| MR (Pin 10)  | VCC        |
+| OE (Pin 13)  | GND        |
+| VCC (Pin 16) | +5V        |
+| GND (Pin 8)  | GND        |
+
+
+## Summary 
+This project implements a 4-digit 7-segment display system controlled via the SPI protocol using an ATmega microcontroller. To reduce GPIO usage and improve scalability, two 74HC595 serial-in parallel-out shift registers are cascaded to control both segment lines and digit selection lines.
+
+The display module used is a 5641AS (Common Cathode) 4-digit 7-segment display. The first shift register drives the segment pins (A–G, DP), while the second shift register controls the digit cathodes. Communication between the microcontroller and the shift registers is handled using hardware SPI for efficient and high-speed data transfer.
+
+
