@@ -29,7 +29,7 @@ void send_16bit(uint8_t digit_byte, uint8_t segment_byte)
     PORTB |= (1<<2);   // LATCH HIGH
 }
 
-/* -------- SEGMENT TABLE (COMMON ANODE) -------- */
+/* -------- SEGMENT TABLE (COMMON CATHODE) -------- */
 uint8_t seg_code[10] =
 {
     0x3F, // 0
