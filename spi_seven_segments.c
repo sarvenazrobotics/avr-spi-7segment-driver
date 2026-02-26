@@ -32,16 +32,16 @@ void send_16bit(uint8_t digit_byte, uint8_t segment_byte)
 /* -------- SEGMENT TABLE (COMMON ANODE) -------- */
 uint8_t seg_code[10] =
 {
-    0xC0, // 0
-    0xF9, // 1
-    0xA4, // 2
-    0xB0, // 3
-    0x99, // 4
-    0x92, // 5
-    0x82, // 6
-    0xF8, // 7
-    0x80, // 8
-    0x90  // 9
+    0x3F, // 0
+    0x06, // 1
+    0x5B, // 2
+    0x4F, // 3
+    0x66, // 4
+    0x6D, // 5
+    0x7D, // 6
+    0x07, // 7
+    0x7F, // 8
+    0x6F  // 9
 };
 
 void main(void)
@@ -51,9 +51,20 @@ void main(void)
 
 
     while(1)
-    {    send_16bit(0b0010,0x99);
-         send_16bit(0b0100,0x82);
-          send_16bit(0b1000,0xF8);
-          send_16bit(0b0001, 0x90);
+    {send_16bit(0b1110, seg_code[9]);
+    delay_ms(5);
+
+    // 4
+    send_16bit(0b1101, seg_code[4]);
+    delay_ms(5);
+
+    // 6
+    send_16bit(0b1011, seg_code[6]);
+    delay_ms(5);
+
+    // 7
+    send_16bit(0b0111, seg_code[7]);
+    delay_ms(5);
+
     }
 }
